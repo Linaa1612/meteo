@@ -189,10 +189,10 @@ function getWeatherDescription(code) {
     const descriptions = {
         0: 'Ciel dégagé',
         1: 'Dégagé',
-        2: 'Partiellement nuageux',
+        2: 'Nuageux',
         3: 'Couvert',
         45: 'Brouillard',
-        48: 'Brouillard verglaçant',
+        48: 'Brouillard',
         51: 'Pluie légère',
         53: 'Pluie modérée',
         55: 'Pluie forte',
