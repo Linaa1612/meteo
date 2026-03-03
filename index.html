@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+
+    <title>meteo</title>
+    <link rel="stylesheet" href="meteo.css">
+</head>
+<body>
+
+    <!-- -------------------Header------------------------- -->
+
+    <header>
+        <div>
+            <h1 id="temp_actuel"></h1>
+            <h2 id="nomVille"></h2>
+            <p id="feels"></p>
+
+            <h3 id="todayInfo"></h3>
+            <div>
+                <p>
+                    <i class="bi bi-moisture humidityIcon"></i>
+                    <span id="humidity"></span>
+                </p>
+                <p>
+                    <i class="fa-solid fa-cloud-rain rainIcon"></i>
+                    <span id="rain"></span>
+                </p>
+
+            </div>
+        </div>
+        <i  class="fa-solid fa-sun sunIcon"></i>
+    </header>
+
+
+    <!-- ----------------------Heurs------------------------- -->
+
+    <div class="first">
+        <div id="heursContainer" class="column"></div>
+    </div>
+
+
+    <!-- ----------------------Jours------------------------- -->
+
+    <div class="second" id="joursContainer"></div>
+
+
+    <!-- ----------------------Sunrise/sunset------------------------- -->
+
+    <div class="third">
+        <div class="allk">
+            <div>
+                <h3></h3>
+                <p class="sunTime"></p>
+                <i class="bi bi-sunrise"></i>
+
+            </div>
+            <div>
+                <h3></h3>
+                <p class="sunTime"></p>
+                <i class="bi bi-sunset"></i>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <label><b>&copy; 2026 Météo</b></label>
+        <i class="bi bi-cloud"></i>
+    </footer>
+    
+
+    <script src="meteo.js"></script>
+</body>
+</html>

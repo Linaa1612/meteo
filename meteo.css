@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #7dc7f6 0%, #87ceeb 50%, #e0f6ff 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+/* -------------------------- Rotation animation -------------------------- */
+
+@keyframes rotation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* -------------------------- HEADER -------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header .sunIcon {
+    font-size: 6rem;
+    color: rgb(244, 220, 7);
+     text-shadow: 0 0 20px rgba(244, 220, 7, 0.8),
+                 0 0 40px rgba(244, 220, 7, 0.5),
+                 0 0 60px rgba(255, 200, 0, 0.3);
+    animation: rotation 4s linear infinite;
+}
+
+header div h1 {
+    font-size: 5rem;
+}
+
+header div h2 {
+    font-size: 3rem;
+}
+
+header div h3 {
+    margin-top: 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+header div div {
+    margin-top: 20px;
+}
+
+header div div p {
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+header div div .humidityIcon {
+    color: rgb(11, 169, 242);
+    margin-right: 8px;
+}
+
+header div div .rainIcon {
+    color: rgb(11, 169, 242);
+    margin-right: 8px;
+}
+
+/* -------------------------- HOURS -------------------------- */
+
+.first {
+    display: flex;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(135, 206, 235, 0.2) 100%);
+    width: 90%;
+    min-height: 250px;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.first .column {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 15px;
+    width: 100%;
+
+}
+
+.hour-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+    text-align: center;
+    min-width: 80px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(125, 199, 246, 0.3) 0%, rgba(176, 224, 230, 0.2) 100%);
+    padding: 12px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.hour-item:hover {
+    background: linear-gradient(135deg, rgba(125, 199, 246, 0.5) 0%, rgba(176, 224, 230, 0.4) 100%);
+    transform: translateY(-5px);
+}
+
+.hour-item p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.hour-item i {
+    font-size: 2rem;
+    margin-top: 8px;
+    color: rgb(244, 220, 7);
+    margin-bottom: 8px;
+}
+
+/* -------------------------- DAYS -------------------------- */
+
+.second {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(135, 206, 235, 0.2) 100%);
+    width: 90%;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 13px;
+    margin-bottom: 20px;
+    padding: 19px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.day-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 17px;
+    padding: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(125, 199, 246, 0.2) 0%, rgba(176, 224, 230, 0.15) 100%);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.day-item:hover {
+    background: linear-gradient(135deg, rgba(125, 199, 246, 0.4) 0%, rgba(176, 224, 230, 0.3) 100%);
+    transform: translateY(-3px);
+}
+
+.day-item .day-name {
+    flex: 0 0 auto;
+    min-width: 100px;
+    font-size: 0.95rem;
+}
+
+.day-item i {
+    font-size: 1.8rem;
+    color: rgb(244, 220, 7);
+    flex: 0 0 auto;
+}
+
+.day-item p {
+    font-size: 0.9rem;
+    flex: 0 1 auto;
+}
+
+.sun {
+    color: rgb(244, 220, 7);
+}
+
+/* -------------------------- SUNRISE / SUNSET -------------------------- */
+
+.third {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(135, 206, 235, 0.2) 100%);
+    width: 90%;
+    min-height: auto;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 19px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.allk {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.third div {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(125, 199, 246, 0.3) 0%, rgba(176, 224, 230, 0.2) 100%);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.third div:hover {
+    background: linear-gradient(135deg, rgba(125, 199, 246, 0.5) 0%, rgba(176, 224, 230, 0.4) 100%);
+    transform: translateY(-5px);
+}
+
+.third div h3 {
+    font-size: 2rem;
+    margin-top: 12px;
+}
+
+.third div p {
+    font-size: 1.4rem;
+    margin-top: 12px;
+}
+
+.third div i {
+    font-size: 6rem;
+    margin-top: 12px;
+    color: rgb(244, 220, 7);
+}
+
+/* ----------------------- FOOTER ------------------------ */
+
+footer {
+    background: linear-gradient(135deg, rgba(125, 199, 246, 0.3) 0%, rgba(176, 224, 230, 0.2) 100%);
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    backdrop-filter: blur(10px);
+}
+
+footer label {
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 15px;
+        margin-top: 30px;
+    }
+
+    footer label {
+        font-size: 0.8rem;
+    }
+}
+
+/* -------------------------- RESPONSIVE -------------------------- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header div h1 {
+        font-size: 3.5rem;
+    }
+
+    header div h2 {
+        font-size: 2rem;
+    }
+
+    .first {
+        width: 95%;
+    }
+
+    .second {
+        width: 95%;
+    }
+
+    .third {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    header .sunIcon {
+        font-size: 3rem;
+        flex-shrink: 0;
+        order: 2;
+    }
+
+    header > div {
+        flex: 1;
+        text-align: left;
+        order: 1;
+    }
+
+    header div h1 {
+        font-size: 2.5rem;
+    }
+
+    header div h2 {
+        font-size: 1.5rem;
+    }
+
+    header div h3 {
+        font-size: 0.9rem;
+    }
+
+    header div div p {
+        font-size: 0.9rem;
+    }
+
+    .first {
+        width: 100%;
+        min-height: 200px;
+        padding: 8px;
+    }
+
+    .hour-item {
+        min-width: 70px;
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .hour-item i {
+        font-size: 1.5rem;
+    }
+
+    .second {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .day-item {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .day-item i {
+        font-size: 1.5rem;
+    }
+
+    .day-item p {
+        font-size: 0.85rem;
+    }
+
+    .third {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .allk {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .third div {
+        min-width: 100%;
+        padding: 15px;
+    }
+
+    .third div h3 {
+        font-size: 1.5rem;
+    }
+
+    .third div p {
+        font-size: 1.2rem;
+    }
+
+    .third div i {
+        font-size: 4rem;
+    }
+}
