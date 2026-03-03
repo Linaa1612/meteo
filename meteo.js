@@ -68,7 +68,7 @@ function displayWeather(data, cityName) {
     const daily = data.daily;
     
     // header
-    document.getElementById('temp_actuel').textContent = `${Math.round(current.temperature_2m)} °C`;
+    document.getElementById('temp_actuel').innerHTML = `${Math.round(current.temperature_2m)} °C`;
     document.getElementById('nomVille').textContent = cityName ;
     
     const today = new Date();
@@ -78,8 +78,8 @@ function displayWeather(data, cityName) {
         day: 'numeric' 
     });
     
-    document.getElementById('humidity').textContent = current.relative_humidity_2m + '%';
-    document.getElementById('rain').textContent = (current.precipitation || 0) + 'mm';
+    document.getElementById('humidity').innerHTML = `<i class="bi bi-moisture humidityIcon"></i>${current.relative_humidity_2m }%`;
+    document.getElementById('rain').innerHTML = `<i class="fa-solid fa-cloud-rain rainIcon"></i> ${(current.precipitation || 0)}mm`;
     document.getElementById('feels').innerHTML = `<b>Ressentie comme ${(current.apparent_temperature || 0)} °C</b> `;
     
     // heures
