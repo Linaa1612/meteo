@@ -116,7 +116,7 @@ header div div .rainIcon {
 }
 
 .hour-item:hover {
-    background: linear-gradient(135deg, rgba(125, 199, 246, 0.5) 0%, rgba(176, 224, 230, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(125, 199, 246, 0.5) 0%, rgba(176, 224, 230, 0.32) 100%);
     transform: translateY(-5px);
 }
 
